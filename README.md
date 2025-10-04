@@ -10,6 +10,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ESSENTIAL!
 Before running the project, make sure to run in the terminal inside the project folder:
 ```npm install next```
+(IF NOT ALREADY INSTALLED).
 
 Then, run the development server:
 
