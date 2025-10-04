@@ -21,4 +21,7 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
--> If the 3000 port is already in use by another process, the terminal may change the port, often to 3001, etc.
+## DISCLAIMER
+
+If the localhost is NOT started in the port 3000, it MIGHT generate errors for the API routine (since the fetch is configured to the 3000 port), so
+MAKE SURE the localhost is running in the 3000 port OR change the body.js fetch to the current port.

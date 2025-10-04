@@ -5,10 +5,10 @@ const redirect = "https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ
 
 export default async function Body() {
 
-  const resOne = await fetch("http://localhost:3001/api/products", { cache: "no-store" });
+  const resOne = await fetch("http://localhost:3000/api/products", { cache: "no-store" });
   const products = await resOne.json();
   const visible = products.slice(0, 4); // Caso haja mais de 4 produtos (só exibimos 4)
-  const resTwo = await fetch("http://localhost:3001/api/comments", {cache: "no-cache"});
+  const resTwo = await fetch("http://localhost:3000/api/comments", {cache: "no-cache"});
   const comments = await resTwo.json();
 
   return (
