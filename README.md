@@ -1,90 +1,93 @@
 # Van Halen – Guitar Store Landing Page
 
-Este é um projeto desenvolvido com Next.js, criado a partir do create-next-app, que consiste em uma landing page mobile-first para uma loja fictícia de guitarras chamada Van Halen.
+This is a project built with **Next.js**, created using `create-next-app`. It consists of a **mobile-first landing page** for a fictional guitar store called **Van Halen**.
 
-O projeto utiliza Tailwind CSS para estilização e conta com uma API interna baseada em rotas do Next.js, retornando dados em formato .json.
+The project uses **Tailwind CSS** for styling and includes an internal API based on Next.js API Routes, returning data in `.json` format.
 
-## 📌 Conceito do Projeto
+## 📌 Project Concept
 
-- Landing page para uma Guitar Store fictícia
+* Landing page for a fictional guitar store
+* Mobile-first design
+* Styling with Tailwind CSS
+* Implementation of Next.js API Routes
+* API consumption via `fetch` on the frontend
 
-- Design Mobile First
+## 🛠️ Technologies Used
 
-- Estilização com Tailwind CSS
+1. **Next.js**
+2. **Node.js**
+3. **React**
+4. **Tailwind CSS**
+5. **Next.js API Routes**
+6. **JavaScript (ES6+)**
 
-- Implementação de API Routes do Next.js
+## 🚀 Prerequisites
 
-- Consumo da API via fetch no frontend
+Before running the project, make sure you have the following installed:
 
-## 🛠️ Tecnologias Utilizadas
+* **Node.js** — LTS version recommended
+* **npm** — or another package manager such as Yarn, pnpm, or Bun
 
-1. Next.js
+⚠️ **Important:** If Next.js is not already installed in the project, run:
 
-2. Node.js
+```bash
+npm install next
+```
 
-3. React
+### Installing Dependencies
 
-4. Tailwind CSS
+From the project's root directory, run:
 
-5. API Routes (Next.js)
+```bash
+npm install
+```
 
-6. JavaScript (ES6+)
+### Running the Development Server
 
-## 🚀 Pré-requisitos
+Start the development server with:
 
-Antes de rodar o projeto, certifique-se de que você tem instalado:
+```bash
+npm run dev
+```
 
-- Node.js (versão recomendada: LTS)
+Then open the project in your browser:
 
-`npm (ou yarn / pnpm / bun)`
-
-⚠️ Essencial: caso o Next.js não esteja instalado no projeto, execute:
-
-`npm install next`
-
-### Instalando as dependências
-
-No diretório raiz do projeto, execute:
-
-`npm install`
-
-Rodando o servidor de desenvolvimento
-
-Depois, inicie o servidor:
-
-`npm run dev`
-
-Abra no navegador:
-
-👉 http://localhost:3000
+```text
+http://localhost:3000
+```
 
 ## 🔌 API Routes
 
-Este projeto utiliza API Routes do Next.js, que retornam dados no formato .json.
+This project uses **Next.js API Routes** to provide data in `.json` format.
 
-As requisições são feitas via fetch diretamente do frontend.
+The API requests are made directly from the frontend using `fetch`.
 
-## ⚠️ Aviso Importante (DISCLAIMER)
+## ⚠️ Important Disclaimer
 
-A API está configurada para funcionar na porta 3000.
+The API is configured to run on **port 3000**.
 
-Caso o projeto seja iniciado em outra porta, podem ocorrer erros nas requisições.
+If the project is started on a different port, API requests may fail.
 
-Soluções:
+### Solutions
 
-Garanta que o projeto esteja rodando em localhost:3000, OU
+Make sure the project is running at:
 
-Altere a porta configurada no fetch (arquivo body.js) para a porta correta.
+```text
+localhost:3000
+```
+
+**or**
+
+Update the port configured in the `fetch` request inside `body.js` to match the port being used by the application.
 
 ## 📱 Design
 
-- Abordagem Mobile First
+* Mobile-first approach
+* Responsive layout
+* Styling implemented exclusively with Tailwind CSS classes
 
-- Layout responsivo
+## 📄 License
 
-- Estilos feitos exclusivamente com classes do Tailwind CSS
+This project is intended for **educational and demonstration purposes only**.
 
-## 📄 Licença
-
-Este projeto é apenas para fins educacionais e demonstrativos.
-Não possui qualquer afiliação com a banda Van Halen ou marcas reais.
+It is not affiliated with the **Van Halen** band or any real-world brands.
