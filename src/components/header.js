@@ -23,7 +23,6 @@ export default function Header() {
       </nav>
 
       {/* Info - icon */}
-      
       <div className="flex items-center">
         <button
           className="order-1 md:order-2 md:hidden text-gray-700"
@@ -33,14 +32,12 @@ export default function Header() {
           <Menu size={24} />
         </button>
         <button
-          className="order-2 ml-3 md:order-1 md:ml-0 text-gray-700 flex items-center"
+          className="hidden md:flex order-2 ml-3 md:order-1 md:ml-0 text-gray-700 items-center"
           onClick={() => setInfoCard(!infoCardState)}
           aria-label="Abrir informações"
         >
           <Info size={20} />
         </button>
-          <Info size={20} />
-        
       </div>
 
       {infoCardState && (
@@ -99,8 +96,19 @@ export default function Header() {
       {open && (
         <div className="absolute top-full left-0 w-full bg-gray-100 shadow-md md:hidden z-50">
           <ul className="flex flex-col items-center py-4 space-y-4 text-gray-700">
-            <li><a href="#collection">Coleção</a></li>
-            <li><a href="#about">Sobre Nós</a></li>
+            <li><a href="#collection" onClick={() => setOpen(false)}>Coleção</a></li>
+            <li><a href="#about" onClick={() => setOpen(false)}>Sobre Nós</a></li>
+            <li>
+              <button
+                onClick={() => {
+                  setInfoCard(true);
+                  setOpen(false);
+                }}
+                className="flex items-center gap-2 text-gray-700 hover:text-black font-medium"
+              >
+                <Info size={18} /> Informações
+              </button>
+            </li>
           </ul>
         </div>
       )}
