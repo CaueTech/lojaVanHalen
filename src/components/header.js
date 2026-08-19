@@ -22,7 +22,7 @@ export default function Header() {
         </ul>
       </nav>
 
-      {/* Info - ícone */}
+      {/* Info - icon */}
       
       <div className="flex items-center">
         <button
@@ -95,7 +95,7 @@ export default function Header() {
           </div>
         </div>
       )}
-      {/* Menu mobile */}
+      {/* Mobile menu */}
       {open && (
         <div className="absolute top-full left-0 w-full bg-gray-100 shadow-md md:hidden z-50">
           <ul className="flex flex-col items-center py-4 space-y-4 text-gray-700">

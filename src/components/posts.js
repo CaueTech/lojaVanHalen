@@ -8,7 +8,7 @@ export default function Post({ name, handle, text, img }) {
               src={img}
               alt={name + " avatar"}
               className="w-full h-full object-cover"
-            /> // Caso não haja url, cria o ícone genérico
+            /> // If there is no url, render generic icon
           ) : (
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
               <path d="M12 12a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>

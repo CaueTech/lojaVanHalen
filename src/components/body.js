@@ -7,7 +7,7 @@ export default async function Body() {
 
   const resOne = await fetch("http://localhost:3000/api/products", { cache: "no-store" });
   const products = await resOne.json();
-  const visible = products.slice(0, 4); // Caso haja mais de 4 produtos (só exibimos 4)
+  const visible = products.slice(0, 4); // In case there are more than 4 products (we only display 4)
   const resTwo = await fetch("http://localhost:3000/api/comments", {cache: "no-cache"});
   const comments = await resTwo.json();
 

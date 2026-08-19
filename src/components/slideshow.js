@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
 export default function Slideshow(props) {
-  // Alguns atributos para configurar o slideshow
+  // Attributes to configure the slideshow
   var slides = props.slides
   if (!slides) slides = []
 
@@ -32,7 +32,7 @@ export default function Slideshow(props) {
     imageOverlayOpacity = Math.max(0, Math.min(1, v))
   }
 
-  // Variáveis para regular comportamento do slide
+  // Variables to regulate slide behavior
   var state = useState(0)
   var index = state[0]
   var setIndex = state[1]
@@ -46,19 +46,19 @@ export default function Slideshow(props) {
 
   var count = slides.length
 
-  // Autoplay (slideshow passando automaticamente)
+  // Autoplay (slideshow advancing automatically)
   useEffect(function () {
     if (!autoplay) return
     if (isPaused) return
     if (count <= 1) return
 
-    // Reseta timer
+    // Reset timer
     if (timeoutRef.current) {
       window.clearTimeout(timeoutRef.current)
     }
 
-    // Cria novo timer
-    timeoutRef.current = window.setTimeout(function () { // Função inline (lambda)
+    // Create new timer
+    timeoutRef.current = window.setTimeout(function () { // Inline function (lambda)
       setIndex(function (current) {
         var nextIndex = current + 1
         if (nextIndex >= count) nextIndex = 0
@@ -66,7 +66,7 @@ export default function Slideshow(props) {
       })
     }, interval)
 
-    //Limpeza
+    // Cleanup
     return function () {
       if (timeoutRef.current) {
         window.clearTimeout(timeoutRef.current)
@@ -74,7 +74,7 @@ export default function Slideshow(props) {
     }
   }, [index, autoplay, isPaused, interval, count])
 
-  // Habilita comandos das setas do teclado
+  // Enable keyboard arrow key controls
   useEffect(function () {
     function onKey(e) {
       if (e.key === "ArrowLeft") {
@@ -89,7 +89,7 @@ export default function Slideshow(props) {
     }
   }, [])
 
-  // Comandos de navegação
+  // Navigation commands
   function prev() {
     setIndex(function (current) {
       var nextIndex = current - 1
@@ -107,14 +107,14 @@ export default function Slideshow(props) {
     })
   }
 
-  // Navegação pelas "bolinhas"
+  // Navigation via dots
   function goTo(i) {
     var safe = i % count
     if (safe < 0) safe = 0
     setIndex(safe)
   }
 
-  // Habilita as setas
+  // Touch handlers
   function onTouchStart(e) {
     if (e.touches && e.touches[0]) {
       touchStartX.current = e.touches[0].clientX
@@ -138,7 +138,7 @@ export default function Slideshow(props) {
     touchStartX.current = null
   }
 
-  // Não retorna nada caso não haja elementos em slides[]
+  // Return null if there are no elements in slides[]
   if (!slides || slides.length === 0) {
     return null
   }
@@ -188,7 +188,7 @@ export default function Slideshow(props) {
         })}
       </div>
 
-      {/* Setas */}
+      {/* Arrows */}
       {showArrows && count > 1 ? (
         <React.Fragment>
           <button
@@ -208,7 +208,7 @@ export default function Slideshow(props) {
         </React.Fragment>
       ) : null}
 
-      {/* Pontos (bolinhas) */}
+      {/* Dots */}
       {showDots && count > 1 ? (
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
           {slides.map(function (_, i) {
